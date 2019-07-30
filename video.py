@@ -7,7 +7,7 @@ from character_detection import character
 from classCNN import NeuralNetwork
 
 cap = cv2.VideoCapture("test_videos/test2.MOV")
-
+myNetwork = NeuralNetwork(modelFile="model/ducdn_ver3.pb",labelFile="model/ducdn_ver3.txt")
 def most_frequent(List): 
     counter = 0
     num = List[0] 
@@ -33,7 +33,6 @@ change_1D_array = []
 change_2D_array = []
 compare_plate = []
 while(cap.isOpened()):
-    myNetwork = NeuralNetwork(modelFile="model/ducdn_ver3.pb",labelFile="model/ducdn_ver3.txt")
     # Capture frame-by-frame
     ret, frame = cap.read()
     if (frame is None):
