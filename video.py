@@ -76,6 +76,8 @@ while(cap.isOpened()):
                     List[2] = 'f'
                 elif List[2] == '1' or List[2] == '4' :
                     List[2] = 'a'
+                elif List[0] == '6':
+                    List[0] = '5'
                 #print(List)
                 for i in range(len(List)):
                     plate_list = plate_list + str(List[i])
